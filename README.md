@@ -13,7 +13,12 @@ A user has the following projects:
 
 They wish to specify that product.rest may use any project, product.io and product.db may use product.core, and product.core should not depend on any other projects. Each project's packages start with com.(project name)
 
-In addition, within/across these projects, there are 3 layers: persistence, domain, and api. api should only use domain, and domain should only use persistence. These are structured within the projects by the name of the layer being within the package name for classes which are part of that layer.
+In addition, within/across these projects, there are 3 layers: 
+- persistence
+- domain
+- api
+
+api should only use domain, and domain should only use persistence. These are structured within the projects by the name of the layer being within the package name for classes which are part of that layer.
 
 ## Scenario 1
 
