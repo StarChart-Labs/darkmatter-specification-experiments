@@ -1,0 +1,21 @@
+projects {
+  product.io allowed product.core
+  product.db allowed product.core
+  product.rest allowed product.io
+  product.rest allowed product.db
+  product.rest allowed product.core
+}
+
+layers {
+  persistence {
+    pattern '**/persistence/**'
+  }
+  domain {
+    pattern '**/domain/**'
+    allowed persistence
+  }
+  api {
+    pattern '**/api/**'
+    allowed domain
+  }
+}

@@ -1,0 +1,23 @@
+projects:
+  name: product.core
+    pattern: **/product/core/**
+  name: product.io
+    pattern: **/product/io/**
+    allowed: product.core
+  name: product.db
+    pattern: **/product/db/**
+    allowed: product.core
+  name: product.rest
+    pattern: **/product/rest/**
+    allowed: product.db,product.io,product.core
+
+
+layers:
+  name: persistence
+    pattern: **/persistence/**
+  name: domain
+    pattern: **/domain/**
+    allowed: persistence
+  name: api
+    pattern: **/api/**
+    allowed: domain

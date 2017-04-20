@@ -1,0 +1,32 @@
+{
+  "projects": [
+    {
+      "name": "product.io",
+      "allowed": [ "product.core" ]
+    },
+    {
+      "name": "product.db",
+      "allowed": [ "product.core" ]
+    },
+    {
+      "name": "product.rest",
+      "allowed": [ "product.db", "product.io", "product.core" ]
+    }
+  ],
+  "layers": [
+    {
+      "name": "persistence",
+      "pattern": "**/persistence/**"
+    },
+    {
+      "name": "domain",
+      "pattern": "**/domain/**",
+      "allowed": [ "persistence" ]
+    },
+    {
+      "name": "api",
+      "pattern": "**/api/**",
+      "allowed": [ "domain" ]
+    }
+  ]
+}
