@@ -1,6 +1,8 @@
 # Use Case Experiments
 
-Example use-case for experimenting with various formats for specifying architecture rules
+Example use-case for experimenting with various formats for specifying architecture rules.
+
+This assumes we want to allow two distinct rule sets: defining what projects may use which other projects, and a more granular set of rules based on package names specifying what classes should use other classes (things like a DB layer not being called directly from a web service, etc)
 
 A user has the following projects:
 
