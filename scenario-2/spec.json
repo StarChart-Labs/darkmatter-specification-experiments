@@ -16,16 +16,37 @@
   "layers": [
     {
       "name": "persistence",
-      "pattern": "**/persistence/**"
+      "pattern": "**/persistence/**",
+      "layers": [
+        {
+          "name": "impl",
+          "pattern": "**/impl/**",
+          "hidden": "true"
+        }
+      ]
     },
     {
       "name": "domain",
       "pattern": "**/domain/**",
+      "layers": [
+        {
+          "name": "impl",
+          "pattern": "**/impl/**",
+          "hidden": "true"
+        }
+      ],
       "allowed": [ "persistence" ]
     },
     {
       "name": "api",
       "pattern": "**/api/**",
+      "layers": [
+        {
+          "name": "impl",
+          "pattern": "**/impl/**",
+          "hidden": "true"
+        }
+      ],
       "allowed": [ "domain" ]
     }
   ]

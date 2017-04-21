@@ -1,22 +1,15 @@
 {
   "projects": [
     {
-      "name": "project.core",
-      "pattern": "**/com/product/core/**"
-    },
-    {
       "name": "product.io",
-      "pattern": "**/com/product/io/**",
       "allowed": [ "product.core" ]
     },
     {
       "name": "product.db",
-      "pattern": "**/com/product/db/**",
       "allowed": [ "product.core" ]
     },
     {
       "name": "product.rest",
-      "pattern": "**/com/product/rest/**",
       "allowed": [ "product.db", "product.io", "product.core" ]
     }
   ],

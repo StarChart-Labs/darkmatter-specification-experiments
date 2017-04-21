@@ -1,21 +1,9 @@
 projects {
-  product.core {
-    pattern '**/product/core/**'
-  }
-  product.io {
-    pattern '**/product/io/**'
-    allowed product.core
-  }
-  product.db {
-    pattern '**/product/db/**'
-    allowed product.core
-  }
-  product.rest {
-    pattern '**/product/rest/**'
-    allowed product.core
-    allowed product.db
-    allowed product.io
-  }
+  product.io allowed product.core
+  product.db allowed product.core
+  product.rest allowed product.io
+  product.rest allowed product.db
+  product.rest allowed product.core
 }
 
 layers {

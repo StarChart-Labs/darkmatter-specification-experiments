@@ -10,9 +10,21 @@ projects:
 layers:
   name: persistence
     pattern: **/persistence/**
+    layers:
+      name: impl
+        pattern: **/impl/**
+        hidden: true
   name: domain
     pattern: **/domain/**
     allowed: persistence
+    layers:
+      name: impl
+        pattern: **/impl/**
+        hidden: true
   name: api
     pattern: **/api/**
     allowed: domain
+    layers:
+      name: impl
+        pattern: **/impl/**
+        hidden: true

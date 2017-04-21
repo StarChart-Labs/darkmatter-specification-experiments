@@ -9,13 +9,31 @@ projects {
 layers {
   persistence {
     pattern '**/persistence/**'
+    layers {
+      impl{
+        pattern '**/impl/**'
+        hidden true
+      }
+    }
   }
   domain {
     pattern '**/domain/**'
     allowed persistence
+    layers {
+      impl{
+        pattern '**/impl/**'
+        hidden true
+      }
+    }
   }
   api {
     pattern '**/api/**'
     allowed domain
+    layers {
+      impl{
+        pattern '**/impl/**'
+        hidden true
+      }
+    }
   }
 }
