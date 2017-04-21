@@ -1,10 +1,15 @@
 projects:
   name: product.io
-    allowed: product.core
+    allowed: 
+      - product.core
   name: product.db
-    allowed: product.core
+    allowed: 
+      - product.core
   name: product.rest
-    allowed: product.db,product.io,product.core
+    allowed: 
+      - product.db
+      - product.io
+      - product.core
 
 
 layers:
@@ -12,7 +17,9 @@ layers:
     pattern: **/persistence/**
   name: domain
     pattern: **/domain/**
-    allowed: persistence
+    allowed: 
+      - persistence
   name: api
     pattern: **/api/**
-    allowed: domain
+    allowed: 
+      - domain
